@@ -60,7 +60,7 @@ header {
 }
 
 .container {
-   width: 100%;
+   /* width: 100%; */
    max-width: 117rem;
    margin: 0 auto;
    padding: 0 1.6rem;
@@ -81,8 +81,8 @@ header {
 }
 
 .nav_phone i {
-    height: 2.3rem;
-    width: 23rem;
+    margin-top: 0.6rem;
+    font-size: 3rem;
 }
 
 .nav_logo a {
@@ -96,19 +96,24 @@ header {
     display: none;
 }
 
+.menu_top .close_toggle i {
+    font-size: 3.2rem;
+    color: var(--orange);
+}
+
 .nav_menu {
     width: 50%;
 }
 
 .nav_list {
     display: flex;
-    align-items: center;
+    align-items: left;
     height: 100%;
     width: 50%;
 }
 
 .nav_item:not(:last-child) {
-    margin-right: 5rem;
+    margin-right: 4rem;
 }
 
 .nav_list .nav_link:link,
@@ -145,7 +150,7 @@ header {
     align-items: center;
     padding: .7rem;
     border: 1px solid var(--black);
-    border-radius: 100%;
+    border-radius: 50%;
     transition: all .3s ease-in-out;
 }
 
@@ -179,16 +184,55 @@ header {
         position: fixed;
         top: 0;
         left: -30rem;
-        width: 0;
+        width: 0rem;
         background-color: var(--white);
         z-index: 9990;
         height: 100%;
-        transition: all .3s;
+        
     }
 
     .nav_menu.open {
-        left: 0rem;
+        left: 0;
         width: 30rem;
+        transition: all 0.8s;
     }
+
+    .nav_logo {
+        width: 50%;
+    }
+
+    .nav_phone {
+        display: block;
+    }
+
+    .menu_top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--black);
+        padding: 1.8rem 1rem;
+    }
+    
+    .menu_top i{
+        width: 3.3rem;
+        fill: var(--orange);
+    }
+
+    .nav_category {
+        color: var(--orange);
+        font-size: 2.3rem;
+        font-weight: 700;
+    }
+
+    .nav_item {
+        margin: 0.6rem;
+        margin-left: 1rem;
+    }
+
+    .nav_list {
+        flex-direction: column;
+      
+    }
+
     
 }
