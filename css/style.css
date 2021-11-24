@@ -27,7 +27,7 @@ html {
 }
 
 body, input {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     font-weight: 400;
     font-family: 'Genos', sans-serif;
     color: var(--black);
@@ -75,10 +75,120 @@ header {
     padding: 0 1rem;
 }
 
-.nav_list {
-    display: flex;
+.nav_phone {
+    display: none;
+    cursor: pointer;
 }
 
-.nav_item {
-    margin: 1.2rem;
+.nav_phone i {
+    height: 2.3rem;
+    width: 23rem;
+}
+
+.nav_logo a {
+    font-size: 3rem;
+    color: var(--black);
+    padding: 1.6rem;
+    font-weight: 700;
+}
+
+.menu_top {
+    display: none;
+}
+
+.nav_menu {
+    width: 50%;
+}
+
+.nav_list {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+.nav_item:not(:last-child) {
+    margin-right: 5rem;
+}
+
+.nav_list .nav_link:link,
+.nav_list .nav_link:visited {
+    display: inline-block;
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    font-style: oblique;
+    font-weight: bold;
+    color: var(--black);
+    transition: color .3s ease-in-out;
+}
+
+.nav_list .nav_link:hover {
+    color: var(--orange);
+}
+
+.nav_icons {
+    display: flex;
+    position: relative;
+}
+
+.nav_icons .icon_item i {
+    width: 2rem;
+    height: 2rem;
+    font-size: 2rem;
+    text-align: center;
+  
+}
+
+.nav_icons .icon_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .7rem;
+    border: 1px solid var(--black);
+    border-radius: 100%;
+    transition: all .3s ease-in-out;
+}
+
+.nav_icons .icon_item:link,
+.nav_icons .icon_item:visited {
+    color: var(--black);
+}
+
+.nav_icons .icon_item:hover {
+    background-color: var(--orange);
+    border: 1px solid var(--black);
+}
+
+.nav_icons .icon_item:not(:last-child) {
+    margin-right: 1rem;
+}
+
+.nav_icons #cart_total {
+    font-size: 1.3rem;
+    position: absolute;
+    bottom: 25px;
+    right: -4px;
+    background-color: var(--orange);
+    padding: .2rem .4rem;
+    border-radius: 100%;
+    color: var(--primaryColor);
+}
+
+@media only screen and (max-width: 768px) {
+    .nav_menu {
+        position: fixed;
+        top: 0;
+        left: -30rem;
+        width: 0;
+        background-color: var(--white);
+        z-index: 9990;
+        height: 100%;
+        transition: all .3s;
+    }
+
+    .nav_menu.open {
+        left: 0rem;
+        width: 30rem;
+    }
+    
 }
